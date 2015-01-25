@@ -27,7 +27,12 @@ class Welcome extends Application {
             $authors[] = array('who' => $record['who'], 'mug' => $record['mug'], 'href' => $record['where']);
         }
         $this->data['authors'] = $authors;
-
+        $this->render();
+    }
+    
+    function shucks(){
+        $this->data['pagebody'] = 'justone';
+        $this->data = array_merge($this->data, $this->quotes->get(2));
         $this->render();
     }
 
