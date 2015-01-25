@@ -23,9 +23,4 @@ class Guess extends Application {
         $this->data = array_merge($this->data, $this->quotes->get(4));
         $this->render();
     }
-    
-    function zzz(){
-
-    }
-
 }

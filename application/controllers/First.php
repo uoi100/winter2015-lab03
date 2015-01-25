@@ -24,12 +24,19 @@ class First extends Application {
         $this->render();
     }
     
+    ///
+    /// sleep routing will run this function
+    ///
     function zzz(){
         $this->data['pagebody'] = 'justone'; // load justone view
         $this->data = array_merge($this->data, $this->quotes->first());
         $this->render();
     }
     
+    ///
+    /// show/# routing will run this function
+    /// $1 variable in routes.php is passed to the $index parameter
+    ///
     function gimme($index){
         $this->data['pagebody'] = 'justone';
         $this->data = array_merge($this->data, $this->quotes->get($index));       

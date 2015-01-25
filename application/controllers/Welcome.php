@@ -30,6 +30,9 @@ class Welcome extends Application {
         $this->render();
     }
     
+    ///
+    /// 'lock/*/*' routing will run this function
+    ///
     function shucks(){
         $this->data['pagebody'] = 'justone';
         $this->data = array_merge($this->data, $this->quotes->get(2));

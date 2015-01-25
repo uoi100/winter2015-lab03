@@ -24,6 +24,9 @@ class Bingo extends Application {
         $this->render();
     }
     
+    ///
+    /// comp####/* routing will run this function
+    ///
     function wisdom(){
         $this->data['pagebody'] = 'justone'; // load justone view
         $this->data = array_merge($this->data, $this->quotes->last());
